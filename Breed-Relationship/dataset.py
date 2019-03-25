@@ -57,7 +57,7 @@ class CatsDataset(Dataset):
         return len(self.catx)
 
     def __getitem__(self, idx):
-        return self.catx[idx], self.caty[idx]
+        return torch.from_numpy(self.catx[idx]).float(), torch.Tensor(self.caty[idx])
 
 if __name__ == '__main__':
     cats = CatsDataset(True)

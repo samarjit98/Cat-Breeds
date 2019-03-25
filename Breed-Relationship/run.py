@@ -13,9 +13,7 @@ import torch.backends.cudnn as cudnn
 from torch.utils.data import DataLoader
 from torchvision.utils import save_image
 
-import accuracy
 from models import *
-from feature import *
 from dataset import *
 from utils import progress_bar
 
@@ -24,13 +22,13 @@ import matplotlib
 
 os.makedirs('./images', exist_ok=True)
 os.makedirs('./checkpoint', exist_ok=True)
-os.makedirs('/logs', exist_ok=True)
+os.makedirs('./logs', exist_ok=True)
 os.makedirs('./weights', exist_ok=True)
 os.makedirs('./information', exist_ok=True)
 
 parser = argparse.ArgumentParser(description='PyTorch Cat Breed Relation')
 parser.add_argument('--lr', default=1e-3, type=float, help='learning rate') 
-parser.add_argument('--batch_size', default=64, type=int) 
+parser.add_argument('--batch_size', default=8, type=int) 
 parser.add_argument('--epochs', '-e', type=int, default=15, help='Number of epochs to train.')
 parser.add_argument('--preparedata', type=int, default=1)
 
@@ -44,8 +42,10 @@ criterion = nn.CrossEntropyLoss()
 print('==> Creating networks..')
 alexnet = AlexNet(12).to(device)
 
+print('==> Loading data..')
+trainset = CatsDataset()
+
 def train_breeds(currepoch, epoch):
-    trainset = CatsDataset()
     dataloader2 = DataLoader(trainset, batch_size=args.batch_size, shuffle=True)
     dataloader = iter(dataloader2)
     print('\n=> Breed Epoch: %d' % epoch)
@@ -87,6 +87,7 @@ def train_breeds(currepoch, epoch):
     torch.save(alexnet.state_dict(), './checkpoints/network_epoch_{}.ckpt'.format(epoch + 1))
     print('=> Classifier Network : Epoch [{}/{}], Loss:{:.4f}'.format(currepoch, epoch, train_loss / len(dataloader)))
 
+print('==> Training starts..')
 for epoch in range(args.epochs):
-    train_breeds(epoch, args.epoch)
+    train_breeds(epoch, args.epochs)
    
