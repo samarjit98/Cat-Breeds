@@ -22,6 +22,12 @@ from utils import progress_bar
 import matplotlib.pyplot as plt
 import matplotlib
 
+os.makedirs('./images', exist_ok=True)
+os.makedirs('./checkpoint', exist_ok=True)
+os.makedirs('/logs', exist_ok=True)
+os.makedirs('./weights', exist_ok=True)
+os.makedirs('./information', exist_ok=True)
+
 parser = argparse.ArgumentParser(description='PyTorch Cat Breed Relation')
 parser.add_argument('--lr', default=1e-3, type=float, help='learning rate') 
 parser.add_argument('--batch_size', default=64, type=int) 
@@ -36,7 +42,7 @@ print('==> Preparing data..')
 criterion = nn.CrossEntropyLoss()
 
 print('==> Creating networks..')
-alexnet = AlexNet(12, 3).to(device)
+alexnet = AlexNet(12).to(device)
 
 def train_breeds(currepoch, epoch):
     trainset = CatsDataset()
