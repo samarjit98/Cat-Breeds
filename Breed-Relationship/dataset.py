@@ -2,9 +2,9 @@ from torch.utils.data import Dataset
 import numpy as np 
 import torch
 
-class IndicDataset(Dataset):
+class CatsDataset(Dataset):
     def __init__(self, X_train, y_train):
-        super(IndicDataset, self).__init__()
+        super(CatsDataset, self).__init__()
         self.X_train = np.array(X_train)
         self.y_train = np.array(y_train)
         self.X_train = np.expand_dims(X_train,axis = 1)
