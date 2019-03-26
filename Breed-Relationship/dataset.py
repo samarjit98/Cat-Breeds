@@ -29,7 +29,7 @@ class CatsDataset(Dataset):
             ]
             src = '/home/nevronas/dataset/Pet_cats2'
 
-            desired_size = 300
+            desired_size = 256
             '''
             for cat in cats:
                 files = os.listdir(src + '/' + cat)
