@@ -28,15 +28,9 @@ class AlexNet(nn.Module):
             nn.Linear(256 * 6 * 6, 4096),
             nn.ReLU(inplace=True),
             nn.Dropout(),
-            nn.Linear(4096, 1024),
+            nn.Linear(4096, 4096),
             nn.ReLU(inplace=True),
-            nn.Dropout(),
-            nn.Linear(1024, 512),
-            nn.ReLU(inplace=True),
-            nn.Dropout(),
-            nn.Linear(512, 128),
-            nn.ReLU(inplace=True),
-            nn.Linear(128, num_classes),
+            nn.Linear(4096, num_classes),
         )
 
     def forward(self, x):

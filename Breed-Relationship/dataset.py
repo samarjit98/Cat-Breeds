@@ -4,6 +4,7 @@ import torch
 import cv2
 import os
 import pickle
+import xml.etree.ElementTree as ET
 
 class CatsDataset(Dataset):
     def __init__(self, load=False):
@@ -28,6 +29,7 @@ class CatsDataset(Dataset):
                 'Sphynx'
             ]
             src = '/home/nevronas/dataset/Pet_cats2'
+            xmls = '/home/nevronas/dataset/annotations/xmls'
 
             desired_size = 256
             '''
@@ -53,7 +55,22 @@ class CatsDataset(Dataset):
                         if '.mat' in f:
                             continue
                         print(f)
+
+                        tree = ET.parse(xmls + '/' + f[:-3] + 'xml')
+                        tree = tree.getroot()
+
+                        xmin = int(tree[5][4][0].text)
+                        ymin = int(tree[5][4][1].text)
+                        xmax = int(tree[5][4][2].text)
+                        ymax = int(tree[5][4][3].text)
+
+                        print(xmin)
+                        print(xmax)
+                        print(ymin)
+                        print(ymax)
+
                         image = cv2.imread(src + '/' + cat + '/' + f)
+                        image = image[ymin:ymax, xmin:xmax]
                         old_size = image.shape[:2]
                         ratio = float(desired_size)/max(old_size)
                         new_size = tuple([int(x*ratio) for x in old_size])
@@ -64,13 +81,14 @@ class CatsDataset(Dataset):
                         left, right = delta_w//2, delta_w-(delta_w//2)
                         color = [0, 0, 0]
                         image = cv2.copyMakeBorder(image, top, bottom, left, right, cv2.BORDER_CONSTANT, value=color)
+                        cv2.imwrite('./images/' + f, image)
                         image = image.transpose(1, 2, 0)
                         image = image.transpose(1, 2, 0)
                         print(image.shape)
                         self.catx.append(image)
                         self.caty.append(i)
-                    except:
-                        continue
+                    except Exception as e:
+                        print(e)
                 i = i+1
             
             file_handler = open('./pickle/cats_pickled.dat', 'wb+')
@@ -87,9 +105,11 @@ class CatsDataset(Dataset):
         return len(self.catx)
 
     def __getitem__(self, idx):
+        return self.catx[idx], self.caty[idx]
+        '''
         one_hot = torch.zeros(12)
         one_hot = one_hot.scatter(0, torch.tensor(self.caty[idx]).type(torch.LongTensor), 1)
         return torch.tensor(self.catx[idx]).type(torch.FloatTensor), torch.tensor(one_hot).type(torch.LongTensor)
-
+        '''
 if __name__ == '__main__':
     cats = CatsDataset(True)

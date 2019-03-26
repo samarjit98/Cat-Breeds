@@ -46,7 +46,9 @@ print('==> Preparing data..')
 criterion = nn.CrossEntropyLoss()
 
 print('==> Creating networks..')
-alexnet = AlexNet(12).to(device)
+alexnet = AlexNet().to(device)
+alexnet.load_state_dict(torch.load('./alexnet/alexnet-owt-4df8aa71.pth'))
+alexnet.classifier[6] = nn.Linear(4096, 12).to(device)
 
 print('==> Loading data..')
 trainset = CatsDataset()
@@ -62,19 +64,20 @@ def train_breeds(currepoch, epoch):
 
     for batch_idx in range(len(dataloader)):
         inputs, targets = next(dataloader)
+        inputs, targets = torch.tensor(inputs).type(torch.FloatTensor), torch.tensor(targets).type(torch.LongTensor)
         inputs, targets = inputs.to(device), targets.to(device)
 
         optimizer.zero_grad()
         y_pred = alexnet(inputs)
 
-        loss = criterion(y_pred, torch.max(targets, 1)[1])
+        loss = criterion(y_pred, targets)
         loss.backward()
         optimizer.step()
 
         train_loss += loss.item()
         _, predicted = y_pred.max(1)
         total += targets.size(0)
-        correct += predicted.eq(torch.max(targets, 1)[1]).sum().item()
+        correct += predicted.eq(targets).sum().item()
 
         with open("./logs/breed_train_loss.log", "a+") as lfile:
             lfile.write("{}\n".format(train_loss / total))

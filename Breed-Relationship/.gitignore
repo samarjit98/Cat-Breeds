@@ -111,3 +111,5 @@ weights/
 logs/
 images/
 information/
+alexnet/
+*.pth
