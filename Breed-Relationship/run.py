@@ -21,19 +21,25 @@ import matplotlib.pyplot as plt
 import matplotlib
 
 os.makedirs('./images', exist_ok=True)
-os.makedirs('./checkpoint', exist_ok=True)
+os.makedirs('./checkpoints', exist_ok=True)
 os.makedirs('./logs', exist_ok=True)
 os.makedirs('./weights', exist_ok=True)
 os.makedirs('./information', exist_ok=True)
 
 parser = argparse.ArgumentParser(description='PyTorch Cat Breed Relation')
 parser.add_argument('--lr', default=1e-3, type=float, help='learning rate') 
-parser.add_argument('--batch_size', default=8, type=int) 
-parser.add_argument('--epochs', '-e', type=int, default=15, help='Number of epochs to train.')
+parser.add_argument('--batch_size', default=16, type=int) 
+parser.add_argument('--epochs', '-e', type=int, default=30, help='Number of epochs to train.')
 parser.add_argument('--preparedata', type=int, default=1)
 
 args = parser.parse_args()
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
+def make_one_hot(labels, C=12):
+    one_hot = torch.cuda.FloatTensor(labels.size(0), C, labels.size(2), labels.size(3)).zero_()
+    target = one_hot.scatter_(1, labels.data, 1)  
+    target = Variable(target)
+    return target
 
 print('==> Preparing data..')
 
@@ -46,9 +52,9 @@ print('==> Loading data..')
 trainset = CatsDataset()
 
 def train_breeds(currepoch, epoch):
-    dataloader2 = DataLoader(trainset, batch_size=args.batch_size, shuffle=True)
-    dataloader = iter(dataloader2)
-    print('\n=> Breed Epoch: %d' % epoch)
+    dataloader = DataLoader(trainset, batch_size=args.batch_size, shuffle=True)
+    dataloader = iter(dataloader)
+    print('\n=> Breed Epoch: %d' % currepoch)
     
     train_loss, correct, total = 0, 0, 0
     params = alexnet.parameters()
@@ -60,14 +66,15 @@ def train_breeds(currepoch, epoch):
 
         optimizer.zero_grad()
         y_pred = alexnet(inputs)
-        loss = criterion(y_pred, targets)
+
+        loss = criterion(y_pred, torch.max(targets, 1)[1])
         loss.backward()
         optimizer.step()
 
         train_loss += loss.item()
         _, predicted = y_pred.max(1)
         total += targets.size(0)
-        correct += predicted.eq(targets).sum().item()
+        correct += predicted.eq(torch.max(targets, 1)[1]).sum().item()
 
         with open("./logs/breed_train_loss.log", "a+") as lfile:
             lfile.write("{}\n".format(train_loss / total))
@@ -82,10 +89,10 @@ def train_breeds(currepoch, epoch):
         torch.save(alexnet.state_dict(), './weights/network.ckpt')
         with open("./information/info.txt", "w+") as f:
             f.write("{} {}".format(epoch, batch_idx))
-        progress_bar(batch_idx, len(dataloader), 'Loss: %.3f | Acc: %.3f%% (%d/%d)' % (train_loss/(batch_idx+1), 100.*correct/total, correct, total))
+        print('Batch: [%d/%d], Loss: %.3f, Train Loss: %.3f , Acc: %.3f%% (%d/%d)' % (batch_idx, len(dataloader), loss.item(), train_loss/(batch_idx+1), 100.0*correct/total, correct, total), end = '\r')
 
     torch.save(alexnet.state_dict(), './checkpoints/network_epoch_{}.ckpt'.format(epoch + 1))
-    print('=> Classifier Network : Epoch [{}/{}], Loss:{:.4f}'.format(currepoch, epoch, train_loss / len(dataloader)))
+    print('=> Classifier Network : Epoch [{}/{}], Loss:{:.4f}'.format(currepoch+1, epoch, train_loss / len(dataloader)))
 
 print('==> Training starts..')
 for epoch in range(args.epochs):
