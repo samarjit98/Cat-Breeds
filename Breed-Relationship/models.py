@@ -39,3 +39,28 @@ class AlexNet(nn.Module):
         x = x.view(x.size(0), 256 * 6 * 6)
         x = self.classifier(x)
         return x
+
+class RowCNN(nn.Module):
+    def __init__(self, num_classes=12):
+        super(RowCNN, self).__init__()
+        self.window_sizes = [5, 10, 20, 40, 50]
+        self.n_filters = 128
+        self.num_classes = num_classes
+        self.convs = nn.ModuleList([
+            nn.Conv2d(3, self.n_filters, [window_size, window_size], padding=(window_size - 1, 0))
+            for window_size in self.window_sizes
+        ])
+
+        self.linear = nn.Linear(self.n_filters * len(self.window_sizes), self.num_classes)
+
+    def forward(self, x):
+        xs = []
+        for conv in self.convs:
+            x2 = F.relu(conv(x))      
+            # x2 = torch.squeeze(x2, -1)  
+            x2 = F.max_pool2d(x2, x2.size(3)) 
+            xs.append(x2)
+        x = torch.cat(xs, 2) 
+        x = x.view(x.size(0), -1)  
+        logits = self.linear(x)
+        return logits

@@ -29,7 +29,7 @@ os.makedirs('./information', exist_ok=True)
 parser = argparse.ArgumentParser(description='PyTorch Cat Breed Relation')
 parser.add_argument('--lr', default=1e-3, type=float, help='learning rate') 
 parser.add_argument('--batch_size', default=16, type=int) 
-parser.add_argument('--epochs', '-e', type=int, default=30, help='Number of epochs to train.')
+parser.add_argument('--epochs', '-e', type=int, default=200, help='Number of epochs to train.')
 parser.add_argument('--preparedata', type=int, default=1)
 
 args = parser.parse_args()
@@ -46,9 +46,7 @@ print('==> Preparing data..')
 criterion = nn.CrossEntropyLoss()
 
 print('==> Creating networks..')
-alexnet = AlexNet().to(device)
-alexnet.load_state_dict(torch.load('./alexnet/alexnet-owt-4df8aa71.pth'))
-alexnet.classifier[6] = nn.Linear(4096, 12).to(device)
+alexnet = RowCNN().to(device)
 
 print('==> Loading data..')
 trainset = CatsDataset()
@@ -92,9 +90,9 @@ def train_breeds(currepoch, epoch):
         torch.save(alexnet.state_dict(), './weights/network.ckpt')
         with open("./information/info.txt", "w+") as f:
             f.write("{} {}".format(epoch, batch_idx))
-        print('Batch: [%d/%d], Loss: %.3f, Train Loss: %.3f , Acc: %.3f%% (%d/%d)' % (batch_idx, len(dataloader), loss.item(), train_loss/(batch_idx+1), 100.0*correct/total, correct, total), end = '\r')
+        print('Batch: [%d/%d], Loss: %.3f, Train Loss: %.3f , Acc: %.3f%% (%d/%d)' % (batch_idx, len(dataloader), loss.item(), train_loss/(batch_idx+1), 100.0*correct/total, correct, total), end='\r')
 
-    torch.save(alexnet.state_dict(), './checkpoints/network_epoch_{}.ckpt'.format(epoch + 1))
+    torch.save(alexnet.state_dict(), './checkpoints/network_epoch_{}.ckpt'.format(currepoch + 1))
     print('=> Classifier Network : Epoch [{}/{}], Loss:{:.4f}'.format(currepoch+1, epoch, train_loss / len(dataloader)))
 
 print('==> Training starts..')
