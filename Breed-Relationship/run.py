@@ -21,10 +21,10 @@ import matplotlib.pyplot as plt
 import matplotlib
 
 os.makedirs('./images', exist_ok=True)
-os.makedirs('./checkpoints', exist_ok=True)
-os.makedirs('./logs', exist_ok=True)
-os.makedirs('./weights', exist_ok=True)
-os.makedirs('./information', exist_ok=True)
+os.makedirs('./checkpoints_body', exist_ok=True)
+os.makedirs('./logs_body', exist_ok=True)
+os.makedirs('./weights_body', exist_ok=True)
+os.makedirs('./information_body', exist_ok=True)
 
 parser = argparse.ArgumentParser(description='PyTorch Cat Breed Relation')
 parser.add_argument('--lr', default=1e-3, type=float, help='learning rate') 
@@ -47,9 +47,10 @@ criterion = nn.CrossEntropyLoss()
 
 print('==> Creating networks..')
 alexnet = RowCNN().to(device)
+alexnet.load_state_dict(torch.load('./weights_body/network.ckpt'))
 
 print('==> Loading data..')
-trainset = CatsDataset()
+trainset = CatsDatasetBody()
 
 def train_breeds(currepoch, epoch):
     dataloader = DataLoader(trainset, batch_size=args.batch_size, shuffle=True)
@@ -77,25 +78,25 @@ def train_breeds(currepoch, epoch):
         total += targets.size(0)
         correct += predicted.eq(targets).sum().item()
 
-        with open("./logs/breed_train_loss.log", "a+") as lfile:
+        with open("./logs_body/breed_train_loss.log", "a+") as lfile:
             lfile.write("{}\n".format(train_loss / total))
 
-        with open("./logs/breed_train_acc.log", "a+") as afile:
+        with open("./logs_body/breed_train_acc.log", "a+") as afile:
             afile.write("{}\n".format(correct / total))
 
         del inputs
         del targets
         gc.collect()
         torch.cuda.empty_cache()
-        torch.save(alexnet.state_dict(), './weights/network.ckpt')
-        with open("./information/info.txt", "w+") as f:
+        torch.save(alexnet.state_dict(), './weights_body/network.ckpt')
+        with open("./information_body/info.txt", "w+") as f:
             f.write("{} {}".format(epoch, batch_idx))
         print('Batch: [%d/%d], Loss: %.3f, Train Loss: %.3f , Acc: %.3f%% (%d/%d)' % (batch_idx, len(dataloader), loss.item(), train_loss/(batch_idx+1), 100.0*correct/total, correct, total), end='\r')
 
-    torch.save(alexnet.state_dict(), './checkpoints/network_epoch_{}.ckpt'.format(currepoch + 1))
+    torch.save(alexnet.state_dict(), './checkpoints_body/network_epoch_{}.ckpt'.format(currepoch + 1))
     print('=> Classifier Network : Epoch [{}/{}], Loss:{:.4f}'.format(currepoch+1, epoch, train_loss / len(dataloader)))
 
 print('==> Training starts..')
-for epoch in range(args.epochs):
+for epoch in range(49, args.epochs):
     train_breeds(epoch, args.epochs)
    

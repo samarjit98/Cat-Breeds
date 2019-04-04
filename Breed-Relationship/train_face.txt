@@ -1,0 +1,604 @@
+==> Preparing data..
+==> Creating networks..
+==> Loading data..
+==> Training starts..
+
+=> Breed Epoch: 0
+=> Classifier Network : Epoch [1/200], Loss:310.1999Acc: 11.869% (141/1188)
+
+=> Breed Epoch: 1
+=> Classifier Network : Epoch [2/200], Loss:11.3102Acc: 15.657% (186/1188)
+
+=> Breed Epoch: 2
+=> Classifier Network : Epoch [3/200], Loss:6.9553cc: 19.613% (233/1188)
+
+=> Breed Epoch: 3
+=> Classifier Network : Epoch [4/200], Loss:5.0479cc: 21.296% (253/1188)
+
+=> Breed Epoch: 4
+=> Classifier Network : Epoch [5/200], Loss:4.2483cc: 20.875% (248/1188)
+
+=> Breed Epoch: 5
+=> Classifier Network : Epoch [6/200], Loss:3.4141cc: 26.263% (312/1188)
+
+=> Breed Epoch: 6
+=> Classifier Network : Epoch [7/200], Loss:2.8684cc: 27.273% (324/1188)
+
+=> Breed Epoch: 7
+=> Classifier Network : Epoch [8/200], Loss:2.6254cc: 31.313% (372/1188)
+
+=> Breed Epoch: 8
+=> Classifier Network : Epoch [9/200], Loss:2.5189cc: 32.071% (381/1188)
+
+=> Breed Epoch: 9
+=> Classifier Network : Epoch [10/200], Loss:2.3563c: 31.902% (379/1188)
+
+=> Breed Epoch: 10
+=> Classifier Network : Epoch [11/200], Loss:2.3279c: 34.259% (407/1188)
+
+=> Breed Epoch: 11
+=> Classifier Network : Epoch [12/200], Loss:2.1502c: 36.532% (434/1188)
+
+=> Breed Epoch: 12
+=> Classifier Network : Epoch [13/200], Loss:2.0049c: 41.414% (492/1188)
+
+=> Breed Epoch: 13
+=> Classifier Network : Epoch [14/200], Loss:2.0369c: 42.340% (503/1188)
+
+=> Breed Epoch: 14
+=> Classifier Network : Epoch [15/200], Loss:1.9581c: 43.182% (513/1188)
+
+=> Breed Epoch: 15
+=> Classifier Network : Epoch [16/200], Loss:1.8767c: 44.781% (532/1188)
+
+=> Breed Epoch: 16
+=> Classifier Network : Epoch [17/200], Loss:1.9258c: 44.108% (524/1188)
+
+=> Breed Epoch: 17
+=> Classifier Network : Epoch [18/200], Loss:1.8985c: 44.192% (525/1188)
+
+=> Breed Epoch: 18
+=> Classifier Network : Epoch [19/200], Loss:1.9522c: 45.286% (538/1188)
+
+=> Breed Epoch: 19
+=> Classifier Network : Epoch [20/200], Loss:1.6837c: 48.401% (575/1188)
+
+=> Breed Epoch: 20
+=> Classifier Network : Epoch [21/200], Loss:1.8118c: 47.138% (560/1188)
+
+=> Breed Epoch: 21
+=> Classifier Network : Epoch [22/200], Loss:1.8086c: 48.822% (580/1188)
+
+=> Breed Epoch: 22
+=> Classifier Network : Epoch [23/200], Loss:1.6229c: 51.431% (611/1188)
+
+=> Breed Epoch: 23
+=> Classifier Network : Epoch [24/200], Loss:1.8072c: 49.916% (593/1188)
+
+=> Breed Epoch: 24
+=> Classifier Network : Epoch [25/200], Loss:1.8350c: 49.074% (583/1188)
+
+=> Breed Epoch: 25
+=> Classifier Network : Epoch [26/200], Loss:1.8598c: 50.337% (598/1188)
+
+=> Breed Epoch: 26
+=> Classifier Network : Epoch [27/200], Loss:1.8835c: 52.189% (620/1188)
+
+=> Breed Epoch: 27
+=> Classifier Network : Epoch [28/200], Loss:1.9010c: 53.704% (638/1188)
+
+=> Breed Epoch: 28
+=> Classifier Network : Epoch [29/200], Loss:1.9206c: 54.461% (647/1188)
+
+=> Breed Epoch: 29
+=> Classifier Network : Epoch [30/200], Loss:1.6913c: 55.724% (662/1188)
+
+=> Breed Epoch: 30
+=> Classifier Network : Epoch [31/200], Loss:1.8150c: 54.630% (649/1188)
+
+=> Breed Epoch: 31
+=> Classifier Network : Epoch [32/200], Loss:1.8240c: 54.545% (648/1188)
+
+=> Breed Epoch: 32
+=> Classifier Network : Epoch [33/200], Loss:1.9784c: 53.367% (634/1188)
+
+=> Breed Epoch: 33
+=> Classifier Network : Epoch [34/200], Loss:1.9289c: 54.461% (647/1188)
+
+=> Breed Epoch: 34
+=> Classifier Network : Epoch [35/200], Loss:1.6238c: 57.239% (680/1188)
+
+=> Breed Epoch: 35
+=> Classifier Network : Epoch [36/200], Loss:1.9818c: 54.461% (647/1188)
+
+=> Breed Epoch: 36
+=> Classifier Network : Epoch [37/200], Loss:1.7152c: 56.061% (666/1188)
+
+=> Breed Epoch: 37
+=> Classifier Network : Epoch [38/200], Loss:1.6515c: 59.091% (702/1188)
+
+=> Breed Epoch: 38
+=> Classifier Network : Epoch [39/200], Loss:1.8347c: 56.987% (677/1188)
+
+=> Breed Epoch: 39
+=> Classifier Network : Epoch [40/200], Loss:2.0472c: 57.407% (682/1188)
+
+=> Breed Epoch: 40
+=> Classifier Network : Epoch [41/200], Loss:1.7422c: 57.239% (680/1188)
+
+=> Breed Epoch: 41
+=> Classifier Network : Epoch [42/200], Loss:1.6381c: 58.333% (693/1188)
+
+=> Breed Epoch: 42
+=> Classifier Network : Epoch [43/200], Loss:2.0006c: 58.838% (699/1188))
+
+=> Breed Epoch: 43
+=> Classifier Network : Epoch [44/200], Loss:1.7207c: 60.101% (714/1188)
+
+=> Breed Epoch: 44
+=> Classifier Network : Epoch [45/200], Loss:1.6569c: 60.438% (718/1188)
+
+=> Breed Epoch: 45
+=> Classifier Network : Epoch [46/200], Loss:1.7154c: 60.606% (720/1188)
+
+=> Breed Epoch: 46
+=> Classifier Network : Epoch [47/200], Loss:1.9719c: 61.364% (729/1188)
+
+=> Breed Epoch: 47
+=> Classifier Network : Epoch [48/200], Loss:1.6874c: 60.606% (720/1188)
+
+=> Breed Epoch: 48
+=> Classifier Network : Epoch [49/200], Loss:1.5620c: 63.047% (749/1188)
+
+=> Breed Epoch: 49
+=> Classifier Network : Epoch [50/200], Loss:1.7887c: 60.943% (724/1188)
+
+=> Breed Epoch: 50
+=> Classifier Network : Epoch [51/200], Loss:1.6626c: 62.963% (748/1188)
+
+=> Breed Epoch: 51
+=> Classifier Network : Epoch [52/200], Loss:1.7206c: 62.710% (745/1188)
+
+=> Breed Epoch: 52
+=> Classifier Network : Epoch [53/200], Loss:1.9162c: 60.269% (716/1188)
+
+=> Breed Epoch: 53
+=> Classifier Network : Epoch [54/200], Loss:1.7928c: 60.522% (719/1188)
+
+=> Breed Epoch: 54
+=> Classifier Network : Epoch [55/200], Loss:1.7371c: 63.721% (757/1188)
+
+=> Breed Epoch: 55
+=> Classifier Network : Epoch [56/200], Loss:1.7078c: 64.562% (767/1188)
+
+=> Breed Epoch: 56
+=> Classifier Network : Epoch [57/200], Loss:1.4155c: 65.572% (779/1188)
+
+=> Breed Epoch: 57
+=> Classifier Network : Epoch [58/200], Loss:1.9294cc: 64.226% (763/1188)
+
+=> Breed Epoch: 58
+=> Classifier Network : Epoch [59/200], Loss:1.7080c: 64.226% (763/1188)
+
+=> Breed Epoch: 59
+=> Classifier Network : Epoch [60/200], Loss:1.7331c: 65.067% (773/1188)
+
+=> Breed Epoch: 60
+=> Classifier Network : Epoch [61/200], Loss:1.6183c: 65.741% (781/1188)
+
+=> Breed Epoch: 61
+=> Classifier Network : Epoch [62/200], Loss:1.8188cc: 65.152% (774/1188)
+
+=> Breed Epoch: 62
+=> Classifier Network : Epoch [63/200], Loss:1.9029c: 62.121% (738/1188)
+
+=> Breed Epoch: 63
+=> Classifier Network : Epoch [64/200], Loss:1.6170c: 65.993% (784/1188)
+
+=> Breed Epoch: 64
+=> Classifier Network : Epoch [65/200], Loss:1.5351c: 65.320% (776/1188)
+
+=> Breed Epoch: 65
+=> Classifier Network : Epoch [66/200], Loss:1.6138c: 64.731% (769/1188)
+
+=> Breed Epoch: 66
+=> Classifier Network : Epoch [67/200], Loss:1.6569c: 63.721% (757/1188)
+
+=> Breed Epoch: 67
+=> Classifier Network : Epoch [68/200], Loss:1.6157c: 66.667% (792/1188)
+
+=> Breed Epoch: 68
+=> Classifier Network : Epoch [69/200], Loss:1.7796c: 66.162% (786/1188)
+
+=> Breed Epoch: 69
+=> Classifier Network : Epoch [70/200], Loss:2.2723c: 63.131% (750/1188)
+
+=> Breed Epoch: 70
+=> Classifier Network : Epoch [71/200], Loss:2.1995c: 64.141% (762/1188)
+
+=> Breed Epoch: 71
+=> Classifier Network : Epoch [72/200], Loss:1.8954c: 65.152% (774/1188)
+
+=> Breed Epoch: 72
+=> Classifier Network : Epoch [73/200], Loss:1.7618c: 66.330% (788/1188)
+
+=> Breed Epoch: 73
+=> Classifier Network : Epoch [74/200], Loss:1.6052c: 67.929% (807/1188)
+
+=> Breed Epoch: 74
+=> Classifier Network : Epoch [75/200], Loss:1.6693c: 69.108% (821/1188)
+
+=> Breed Epoch: 75
+=> Classifier Network : Epoch [76/200], Loss:1.6833c: 66.751% (793/1188)
+
+=> Breed Epoch: 76
+=> Classifier Network : Epoch [77/200], Loss:1.9033c: 64.899% (771/1188)
+
+=> Breed Epoch: 77
+=> Classifier Network : Epoch [78/200], Loss:1.7461c: 67.003% (796/1188)
+
+=> Breed Epoch: 78
+=> Classifier Network : Epoch [79/200], Loss:1.7195c: 66.582% (791/1188)
+
+=> Breed Epoch: 79
+=> Classifier Network : Epoch [80/200], Loss:1.9777c: 66.498% (790/1188)
+
+=> Breed Epoch: 80
+=> Classifier Network : Epoch [81/200], Loss:1.6848c: 69.613% (827/1188)
+
+=> Breed Epoch: 81
+=> Classifier Network : Epoch [82/200], Loss:1.8751c: 68.939% (819/1188)
+
+=> Breed Epoch: 82
+=> Classifier Network : Epoch [83/200], Loss:1.9773c: 68.013% (808/1188)
+
+=> Breed Epoch: 83
+=> Classifier Network : Epoch [84/200], Loss:1.7840c: 68.771% (817/1188)
+
+=> Breed Epoch: 84
+=> Classifier Network : Epoch [85/200], Loss:1.9913c: 67.340% (800/1188)
+
+=> Breed Epoch: 85
+=> Classifier Network : Epoch [86/200], Loss:2.0064c: 69.108% (821/1188)
+
+=> Breed Epoch: 86
+=> Classifier Network : Epoch [87/200], Loss:1.9385c: 67.088% (797/1188)
+
+=> Breed Epoch: 87
+=> Classifier Network : Epoch [88/200], Loss:2.1216cc: 69.781% (829/1188)
+
+=> Breed Epoch: 88
+=> Classifier Network : Epoch [89/200], Loss:2.4429c: 66.919% (795/1188))
+
+=> Breed Epoch: 89
+=> Classifier Network : Epoch [90/200], Loss:1.9019c: 66.751% (793/1188)
+
+=> Breed Epoch: 90
+=> Classifier Network : Epoch [91/200], Loss:1.5673c: 70.791% (841/1188)
+
+=> Breed Epoch: 91
+=> Classifier Network : Epoch [92/200], Loss:2.3301c: 68.098% (809/1188)
+
+=> Breed Epoch: 92
+=> Classifier Network : Epoch [93/200], Loss:1.9485c: 67.003% (796/1188)
+
+=> Breed Epoch: 93
+=> Classifier Network : Epoch [94/200], Loss:1.9836c: 70.202% (834/1188)
+
+=> Breed Epoch: 94
+=> Classifier Network : Epoch [95/200], Loss:1.6774c: 70.623% (839/1188)
+
+=> Breed Epoch: 95
+=> Classifier Network : Epoch [96/200], Loss:1.5467c: 70.875% (842/1188)
+
+=> Breed Epoch: 96
+=> Classifier Network : Epoch [97/200], Loss:1.5622c: 72.727% (864/1188)
+
+=> Breed Epoch: 97
+=> Classifier Network : Epoch [98/200], Loss:2.1659c: 66.667% (792/1188)
+
+=> Breed Epoch: 98
+=> Classifier Network : Epoch [99/200], Loss:2.0310c: 70.370% (836/1188)
+
+=> Breed Epoch: 99
+=> Classifier Network : Epoch [100/200], Loss:1.6983: 71.128% (845/1188)
+
+=> Breed Epoch: 100
+=> Classifier Network : Epoch [101/200], Loss:2.1509: 69.949% (831/1188)
+
+=> Breed Epoch: 101
+=> Classifier Network : Epoch [102/200], Loss:1.9299: 69.529% (826/1188)
+
+=> Breed Epoch: 102
+=> Classifier Network : Epoch [103/200], Loss:1.9299: 70.791% (841/1188)
+
+=> Breed Epoch: 103
+=> Classifier Network : Epoch [104/200], Loss:2.3277: 68.855% (818/1188)
+
+=> Breed Epoch: 104
+=> Classifier Network : Epoch [105/200], Loss:1.8748: 70.875% (842/1188)
+
+=> Breed Epoch: 105
+=> Classifier Network : Epoch [106/200], Loss:1.7809: 74.242% (882/1188)
+
+=> Breed Epoch: 106
+=> Classifier Network : Epoch [107/200], Loss:1.7166: 71.212% (846/1188)
+
+=> Breed Epoch: 107
+=> Classifier Network : Epoch [108/200], Loss:1.7648: 71.717% (852/1188)
+
+=> Breed Epoch: 108
+=> Classifier Network : Epoch [109/200], Loss:1.8379: 72.811% (865/1188)
+
+=> Breed Epoch: 109
+=> Classifier Network : Epoch [110/200], Loss:2.0860: 71.465% (849/1188)
+
+=> Breed Epoch: 110
+=> Classifier Network : Epoch [111/200], Loss:2.0096: 71.549% (850/1188)
+
+=> Breed Epoch: 111
+=> Classifier Network : Epoch [112/200], Loss:2.0978: 71.717% (852/1188)
+
+=> Breed Epoch: 112
+=> Classifier Network : Epoch [113/200], Loss:2.2975: 70.455% (837/1188)
+
+=> Breed Epoch: 113
+=> Classifier Network : Epoch [114/200], Loss:2.0410: 72.896% (866/1188)
+
+=> Breed Epoch: 114
+=> Classifier Network : Epoch [115/200], Loss:2.4145: 69.697% (828/1188)
+
+=> Breed Epoch: 115
+=> Classifier Network : Epoch [116/200], Loss:2.1107: 70.791% (841/1188)
+
+=> Breed Epoch: 116
+=> Classifier Network : Epoch [117/200], Loss:2.0294: 73.316% (871/1188)
+
+=> Breed Epoch: 117
+=> Classifier Network : Epoch [118/200], Loss:2.3400: 72.222% (858/1188)
+
+=> Breed Epoch: 118
+=> Classifier Network : Epoch [119/200], Loss:1.7654: 74.242% (882/1188)
+
+=> Breed Epoch: 119
+=> Classifier Network : Epoch [120/200], Loss:1.8142: 72.222% (858/1188)
+
+=> Breed Epoch: 120
+=> Classifier Network : Epoch [121/200], Loss:1.8352: 70.960% (843/1188)
+
+=> Breed Epoch: 121
+=> Classifier Network : Epoch [122/200], Loss:1.6093: 74.411% (884/1188)
+
+=> Breed Epoch: 122
+=> Classifier Network : Epoch [123/200], Loss:1.8436: 75.337% (895/1188)
+
+=> Breed Epoch: 123
+=> Classifier Network : Epoch [124/200], Loss:1.8438: 73.569% (874/1188)
+
+=> Breed Epoch: 124
+=> Classifier Network : Epoch [125/200], Loss:1.6240: 74.747% (888/1188)
+
+=> Breed Epoch: 125
+=> Classifier Network : Epoch [126/200], Loss:2.2741: 73.990% (879/1188)
+
+=> Breed Epoch: 126
+=> Classifier Network : Epoch [127/200], Loss:2.0879: 73.401% (872/1188)
+
+=> Breed Epoch: 127
+=> Classifier Network : Epoch [128/200], Loss:2.2769: 72.896% (866/1188))
+
+=> Breed Epoch: 128
+=> Classifier Network : Epoch [129/200], Loss:1.9123: 75.505% (897/1188)
+
+=> Breed Epoch: 129
+=> Classifier Network : Epoch [130/200], Loss:1.9720: 72.559% (862/1188)
+
+=> Breed Epoch: 130
+=> Classifier Network : Epoch [131/200], Loss:1.7059: 75.589% (898/1188)
+
+=> Breed Epoch: 131
+=> Classifier Network : Epoch [132/200], Loss:1.9271: 74.327% (883/1188)
+
+=> Breed Epoch: 132
+=> Classifier Network : Epoch [133/200], Loss:1.8128: 74.158% (881/1188)
+
+=> Breed Epoch: 133
+=> Classifier Network : Epoch [134/200], Loss:1.8565: 74.747% (888/1188)
+
+=> Breed Epoch: 134
+=> Classifier Network : Epoch [135/200], Loss:2.1855: 74.495% (885/1188)
+
+=> Breed Epoch: 135
+=> Classifier Network : Epoch [136/200], Loss:1.8176: 75.337% (895/1188)
+
+=> Breed Epoch: 136
+=> Classifier Network : Epoch [137/200], Loss:1.9042: 75.842% (901/1188)
+
+=> Breed Epoch: 137
+=> Classifier Network : Epoch [138/200], Loss:2.2125: 73.737% (876/1188))
+
+=> Breed Epoch: 138
+=> Classifier Network : Epoch [139/200], Loss:1.8837: 75.926% (902/1188)
+
+=> Breed Epoch: 139
+=> Classifier Network : Epoch [140/200], Loss:2.1071: 74.411% (884/1188)
+
+=> Breed Epoch: 140
+=> Classifier Network : Epoch [141/200], Loss:1.7793: 76.010% (903/1188)
+
+=> Breed Epoch: 141
+=> Classifier Network : Epoch [142/200], Loss:1.8994: 77.020% (915/1188)
+
+=> Breed Epoch: 142
+=> Classifier Network : Epoch [143/200], Loss:1.8470: 77.020% (915/1188)
+
+=> Breed Epoch: 143
+=> Classifier Network : Epoch [144/200], Loss:1.8201: 76.094% (904/1188)
+
+=> Breed Epoch: 144
+=> Classifier Network : Epoch [145/200], Loss:2.2801: 73.485% (873/1188)
+
+=> Breed Epoch: 145
+=> Classifier Network : Epoch [146/200], Loss:2.5668: 72.391% (860/1188)
+
+=> Breed Epoch: 146
+=> Classifier Network : Epoch [147/200], Loss:2.4615: 74.158% (881/1188))
+
+=> Breed Epoch: 147
+=> Classifier Network : Epoch [148/200], Loss:1.9069: 75.842% (901/1188)
+
+=> Breed Epoch: 148
+=> Classifier Network : Epoch [149/200], Loss:1.5307: 77.946% (926/1188)
+
+=> Breed Epoch: 149
+=> Classifier Network : Epoch [150/200], Loss:2.1417: 75.337% (895/1188)
+
+=> Breed Epoch: 150
+=> Classifier Network : Epoch [151/200], Loss:1.8318: 77.441% (920/1188)
+
+=> Breed Epoch: 151
+=> Classifier Network : Epoch [152/200], Loss:1.7222: 75.337% (895/1188)
+
+=> Breed Epoch: 152
+=> Classifier Network : Epoch [153/200], Loss:1.7107: 78.704% (935/1188)
+
+=> Breed Epoch: 153
+=> Classifier Network : Epoch [154/200], Loss:2.3165: 75.505% (897/1188)
+
+=> Breed Epoch: 154
+=> Classifier Network : Epoch [155/200], Loss:1.4922: 78.788% (936/1188)
+
+=> Breed Epoch: 155
+=> Classifier Network : Epoch [156/200], Loss:2.1019: 76.768% (912/1188)
+
+=> Breed Epoch: 156
+=> Classifier Network : Epoch [157/200], Loss:2.0816: 75.000% (891/1188)
+
+=> Breed Epoch: 157
+=> Classifier Network : Epoch [158/200], Loss:1.4444: 79.293% (942/1188)
+
+=> Breed Epoch: 158
+=> Classifier Network : Epoch [159/200], Loss:2.0785: 76.010% (903/1188)
+
+=> Breed Epoch: 159
+=> Classifier Network : Epoch [160/200], Loss:1.6711: 79.040% (939/1188))
+
+=> Breed Epoch: 160
+=> Classifier Network : Epoch [161/200], Loss:2.0858: 76.431% (908/1188)
+
+=> Breed Epoch: 161
+=> Classifier Network : Epoch [162/200], Loss:1.7544: 78.199% (929/1188)
+
+=> Breed Epoch: 162
+=> Classifier Network : Epoch [163/200], Loss:1.4608: 79.714% (947/1188)
+
+=> Breed Epoch: 163
+=> Classifier Network : Epoch [164/200], Loss:2.1183: 77.862% (925/1188)
+
+=> Breed Epoch: 164
+=> Classifier Network : Epoch [165/200], Loss:2.1061c: 78.199% (929/1188)
+
+=> Breed Epoch: 165
+=> Classifier Network : Epoch [166/200], Loss:2.7119c: 75.842% (901/1188)
+
+=> Breed Epoch: 166
+=> Classifier Network : Epoch [167/200], Loss:1.9566: 76.178% (905/1188)
+
+=> Breed Epoch: 167
+=> Classifier Network : Epoch [168/200], Loss:1.7110: 78.114% (928/1188)
+
+=> Breed Epoch: 168
+=> Classifier Network : Epoch [169/200], Loss:2.1343: 77.020% (915/1188)
+
+=> Breed Epoch: 169
+=> Classifier Network : Epoch [170/200], Loss:1.8199: 77.525% (921/1188)
+
+=> Breed Epoch: 170
+=> Classifier Network : Epoch [171/200], Loss:2.3422: 76.768% (912/1188)
+
+=> Breed Epoch: 171
+=> Classifier Network : Epoch [172/200], Loss:1.8267: 77.525% (921/1188)
+
+=> Breed Epoch: 172
+=> Classifier Network : Epoch [173/200], Loss:2.3521: 77.104% (916/1188)
+
+=> Breed Epoch: 173
+=> Classifier Network : Epoch [174/200], Loss:1.9798: 79.293% (942/1188)
+
+=> Breed Epoch: 174
+=> Classifier Network : Epoch [175/200], Loss:1.7795: 79.125% (940/1188)
+
+=> Breed Epoch: 175
+=> Classifier Network : Epoch [176/200], Loss:2.4062: 77.357% (919/1188))
+
+=> Breed Epoch: 176
+=> Classifier Network : Epoch [177/200], Loss:1.9126: 78.367% (931/1188)
+
+=> Breed Epoch: 177
+=> Classifier Network : Epoch [178/200], Loss:1.5332: 81.145% (964/1188)
+
+=> Breed Epoch: 178
+=> Classifier Network : Epoch [179/200], Loss:1.8644: 79.125% (940/1188))
+
+=> Breed Epoch: 179
+=> Classifier Network : Epoch [180/200], Loss:2.1702: 77.357% (919/1188)
+
+=> Breed Epoch: 180
+=> Classifier Network : Epoch [181/200], Loss:1.6277: 78.956% (938/1188)
+
+=> Breed Epoch: 181
+=> Classifier Network : Epoch [182/200], Loss:1.8990: 77.357% (919/1188)
+
+=> Breed Epoch: 182
+=> Classifier Network : Epoch [183/200], Loss:2.0762: 78.872% (937/1188)
+
+=> Breed Epoch: 183
+=> Classifier Network : Epoch [184/200], Loss:1.5483: 80.303% (954/1188)
+
+=> Breed Epoch: 184
+=> Classifier Network : Epoch [185/200], Loss:1.7554: 80.640% (958/1188)
+
+=> Breed Epoch: 185
+=> Classifier Network : Epoch [186/200], Loss:1.7640: 80.808% (960/1188)
+
+=> Breed Epoch: 186
+=> Classifier Network : Epoch [187/200], Loss:1.8217: 79.545% (945/1188)
+
+=> Breed Epoch: 187
+=> Classifier Network : Epoch [188/200], Loss:1.4077: 80.892% (961/1188)
+
+=> Breed Epoch: 188
+=> Classifier Network : Epoch [189/200], Loss:2.0336: 79.798% (948/1188)
+
+=> Breed Epoch: 189
+=> Classifier Network : Epoch [190/200], Loss:2.7222: 77.189% (917/1188))
+
+=> Breed Epoch: 190
+=> Classifier Network : Epoch [191/200], Loss:2.1837: 77.441% (920/1188)
+
+=> Breed Epoch: 191
+=> Classifier Network : Epoch [192/200], Loss:2.2773: 79.461% (944/1188)
+
+=> Breed Epoch: 192
+=> Classifier Network : Epoch [193/200], Loss:2.2818: 78.030% (927/1188)
+
+=> Breed Epoch: 193
+=> Classifier Network : Epoch [194/200], Loss:2.1792c: 79.798% (948/1188)
+
+=> Breed Epoch: 194
+=> Classifier Network : Epoch [195/200], Loss:1.8438: 80.640% (958/1188)
+
+=> Breed Epoch: 195
+=> Classifier Network : Epoch [196/200], Loss:2.4720: 78.114% (928/1188))
+
+=> Breed Epoch: 196
+=> Classifier Network : Epoch [197/200], Loss:2.3422: 80.219% (953/1188)
+
+=> Breed Epoch: 197
+=> Classifier Network : Epoch [198/200], Loss:1.9131: 79.293% (942/1188)
+
+=> Breed Epoch: 198
+=> Classifier Network : Epoch [199/200], Loss:1.9583c: 80.387% (955/1188)
+
+=> Breed Epoch: 199
+=> Classifier Network : Epoch [200/200], Loss:2.1797: 80.303% (954/1188)
