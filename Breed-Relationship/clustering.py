@@ -6,7 +6,7 @@ import scipy.cluster.hierarchy as shc
 
 
 
-# Visualize the clustering
+
 def plot_clustering(X, labels, title=None):
     x_min, x_max = np.min(X, axis=0), np.max(X, axis=0)
     X = (X - x_min) / (x_max - x_min)
