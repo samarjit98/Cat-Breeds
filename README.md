@@ -1,5 +1,5 @@
 # Cat-Breeds
-Cat breed classification using RawCNN
+Cat breed classification using RowCNN and deriving interesting inter-breed relationships.
 
 Made with Caffeine and </> by:
   1. Samarjit Karmakar (167256)
