@@ -1,4 +1,4 @@
-This project was done as a part of Minor 2 for the "Advanced Data Mining" course at NITW.
+This project was done as a part of Minor 2 assessment for the "Advanced Data Mining" course at NITW.
 
 The contributors are:
 1. Samarjit Karmakar (167256)
