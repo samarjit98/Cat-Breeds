@@ -1,0 +1,7 @@
+This project was done as a part of Minor 2 for Advanced Data Mining course.
+
+The contributors are:
+1. Samarjit Karmakar (167256)
+2. Himadyuti Bhanja (167223)
+3. Dilisha Jain (167228)
+4. Pratham Tangri (167148)
