@@ -1,5 +1,5 @@
 # Cat-Breeds
-Cat breed classification using Alexnet
+Cat breed classification using RawCNN
 
 Made with Caffeine and </> by:
   1. Samarjit Karmakar (167256)
